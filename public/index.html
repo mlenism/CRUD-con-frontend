@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+        <script type="text/javascript" src="js/cambiarPestanna.js"></script>
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <title></title>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="titulo">CRUD pacientes</div>
+            <div id="tabs">
+                <ul id=lista>
+                    <li id="tab1"><a href='javascript:cambiarPestanna(tabs,tab1);'>Create</a></li>
+                    <li id="tab2"><a href='javascript:cambiarPestanna(tabs,tab2);'>Read</a></li>
+                    <li id="tab3"><a href='javascript:cambiarPestanna(tabs,tab3);'>Update</a></li>
+                    <li id="tab4"><a href='javascript:cambiarPestanna(tabs,tab4);'>Delete</a></li>
+                </ul>
+            </div>
+            
+            <body onload="javascript:cambiarPestanna(tabs,tab1);"></body>
+       
+            <div id="contenidotabs">
+                <div id="ctab1">
+
+                    <form id="contact" action="" method="post">
+                      <h3>Ingresar Paciente</h3>
+                      <fieldset>
+                        <input placeholder="Nombre" name="nombre" type="text" tabindex="1" required autofocus>
+                      </fieldset>
+                      <fieldset>
+                        <input placeholder="Apellido" name="apellido" type="text" tabindex="1" required autofocus>
+                      </fieldset>
+                      <fieldset>
+                        <input placeholder="Id" name="identificacion" type="text" tabindex="2" required>
+                      </fieldset>
+                      <fieldset>
+                        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                      </fieldset>                
+                    </form>
+
+                </div>
+                
+                <div id="ctab2">
+                  
+                    <fieldset>
+                      <button id="ctab2-read" onclick="get()">Read</button>
+                    </fieldset>
+                    
+                    <table class="table" id="tablaRead">
+                    
+                      <thead class="thead-dark" >
+                        <tr>
+                          <th scope="col">Id</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellido</th>
+                          <th scope="col">NumId Paciente</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tablacontenido">
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+
+                    </table>       
+
+                </div>
+
+                <div id="ctab3">
+                    
+                  <form id="contact-update" action="" method="put">
+                    <h3>Actualizar Pacientes</h3>
+                    <fieldset>
+                      <input placeholder="Id" name="idpaciente" type="text" tabindex="1" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                      <input placeholder="Nombre" name="nombre" type="text" tabindex="1" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                      <input placeholder="Apellido" name="apellido" type="text" tabindex="1" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                      <input placeholder="NumId" name="identificacion" type="text" tabindex="2" required>
+                    </fieldset>
+                    <fieldset>
+                      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    </fieldset>                
+                  </form>
+
+                </div>
+                <div id="ctab4">
+                    
+                  <form id="contact-delete" action="" method="delete">
+                    <h3>Borrar Pacientes</h3>
+                    <fieldset>
+                      <input placeholder="Id" name="idpaciente" type="text" tabindex="1" required autofocus>
+                    </fieldset>                    
+                    <fieldset>
+                      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    </fieldset>                
+                  </form>
+
+                </div>                
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+
+    </body>
+</html>
